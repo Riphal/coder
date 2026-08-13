@@ -18,6 +18,7 @@ type TemplateCardProps = {
 export const TemplateCard: React.FC<TemplateCardProps> = ({
 	name,
 	description,
+	subtitle,
 	iconUrl,
 	detailsUrl,
 	official = true,
