@@ -7,6 +7,7 @@ import { cn } from "#/utils/cn";
 type TemplateCardProps = {
 	name: string;
 	description: string;
+	subtitle?: string;
 	iconUrl?: string;
 	detailsUrl: string;
 	official?: boolean;
