@@ -33,7 +33,7 @@ export const TemplateCard: React.FC<TemplateCardProps> = ({
 			aria-labelledby={nameId}
 			tabIndex={0}
 			className={cn(
-				"flex flex-col pt-4 px-4 pb-6 rounded",
+				"flex flex-col gap-3 pt-5 px-5 pb-5 rounded-lg",
 				"bg-surface-secondary border border-solid",
 				"cursor-pointer",
 				"focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary",
