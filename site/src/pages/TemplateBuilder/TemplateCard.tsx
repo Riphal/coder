@@ -47,41 +47,48 @@ export const TemplateCard: React.FC<TemplateCardProps> = ({
 				}
 			}}
 		>
-			<div className="flex items-start justify-between mb-3">
+			<div className="flex items-start justify-between">
 				<Avatar src={iconUrl} size="lg" variant="icon" />
-				<div
-					aria-hidden="true"
-					className={cn(
-						"flex items-center justify-center size-4 rounded-full border border-solid mt-0.5 shrink-0",
-						selected ? "border-content-primary" : "border-content-secondary",
-					)}
-				>
-					{selected && (
-						<div className="size-2 rounded-full bg-content-primary" />
-					)}
-				</div>
+				{official && (
+					<div className="flex items-center gap-1 rounded-md bg-surface-tertiary px-1.5 py-[3px]">
+						<CircleCheckBigIcon className="size-icon-xs text-highlight-sky" />
+						<span className="text-2xs font-medium text-content-primary">
+							Official
+						</span>
+					</div>
+				)}
 			</div>
 
-			<div>
-				<h3 id={nameId} className="text-sm font-bold text-content-primary">
-					{name}
-					{official && (
-						<>
-							{" "}
-							<BadgeCheckIcon className="size-4 text-highlight-sky align-middle" />
-						</>
+			<div className="flex flex-col gap-3">
+				<div className="flex flex-col gap-0.5">
+					<h3
+						id={nameId}
+						className="text-sm font-semibold text-content-primary"
+					>
+						{name}
+					</h3>
+					{subtitle && (
+						<p className="text-xs font-normal text-content-secondary">
+							{subtitle}
+						</p>
 					)}
-				</h3>
-				<div>
-					<p className="text-xs font-normal text-content-secondary">
+				</div>
+
+				<div className="flex flex-col gap-3">
+					<p className="text-[13px] font-normal text-content-secondary">
 						{description}
 					</p>
 
-					<Link
-						href={detailsUrl}
-						target="_blank"
-						className="text-xs font-normal"
-					>
+					{official && (
+						<div className="flex items-center gap-1.5">
+							<ShieldCheckIcon className="size-icon-sm shrink-0 text-highlight-sky" />
+							<span className="text-xs font-normal text-content-secondary">
+								Verified official template
+							</span>
+						</div>
+					)}
+
+					<Link href={detailsUrl} target="_blank" size="sm">
 						View details
 					</Link>
 				</div>
