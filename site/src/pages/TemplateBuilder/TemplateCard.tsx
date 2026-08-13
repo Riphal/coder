@@ -1,4 +1,4 @@
-import { BadgeCheckIcon } from "lucide-react";
+import { CircleCheckBigIcon, ShieldCheckIcon } from "lucide-react";
 import { useId } from "react";
 import { Avatar } from "#/components/Avatar/Avatar";
 import { Link } from "#/components/Link/Link";
